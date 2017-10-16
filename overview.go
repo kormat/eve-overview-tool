@@ -17,8 +17,6 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"strconv"
-	"strings"
 
 	"gopkg.in/yaml.v2"
 )
@@ -36,104 +34,83 @@ func loadConfig() (*Overview, error) {
 }
 
 type Overview struct {
-	BackgroundOrder  []StateType `yaml:"backgroundOrder"`
-	BackgroundStates []StateType `yaml:"backgroundStates"`
-	ColumnOrder      []string    `yaml:"columnOrder"`
-	FlagOrder        []StateType `yaml:"flagOrder"`
-	FlagStates       []StateType `yaml:"flagStates"`
-	OverviewColumns  []string    `yaml:"overviewColumns"`
-	Presets          []*Preset   `yaml:"presets"`
+	BackgroundOrder     []StateType       `yaml:"backgroundOrder"`
+	BackgroundStates    []StateType       `yaml:"backgroundStates"`
+	ColumnOrder         []string          `yaml:"columnOrder"`
+	FlagOrder           []StateType       `yaml:"flagOrder"`
+	FlagStates          []StateType       `yaml:"flagStates"`
+	OverviewColumns     []string          `yaml:"overviewColumns"`
+	Presets             []*Preset         `yaml:"presets"`
+	ShipLabelOrder      []NullableString  `yaml:"shipLabelOrder"`
+	ShipLabels          []*ShipLabel      `yaml:"shipLabels"`
+	StateBlinks         []*StateBlink     `yaml:"stateBlinks"`
+	StateColorsNameList []*StateColorName `yaml:"stateColorsNameList"`
+	TabSetup            []*TabSetup       `yaml:"tabSetup"`
+	UserSettings        []*UserSetting    `yaml:"userSettings"`
 }
 
-type Preset struct {
-	Name              string
-	AlwaysShownStates []StateType
-	FilteredStates    []StateType
-	Groups            []InvGroup
+type InvGroup int
+
+func (ig InvGroup) name() string {
+	s, ok := invGroups[ig]
+	if !ok {
+		s = "Unknown InvGroup"
+	}
+	return s
 }
 
-func (p *Preset) MarshalYAML() (interface{}, error) {
-	return []interface{}{
-		p.Name,
-		[]interface{}{
-			[]interface{}{"alwaysShownStates", p.AlwaysShownStates},
-			[]interface{}{"filteredStates", p.FilteredStates},
-			[]interface{}{"groups", p.Groups},
-		},
-	}, nil
+func (ig InvGroup) String() string {
+	return fmt.Sprintf("%s (%d)", ig.name(), int(ig))
 }
 
-func (p *Preset) UnmarshalYAML(f func(interface{}) error) error {
-	v := []interface{}{
-		"",
-		[]interface{}{
-			[]interface{}{"", make([]string, 0)},
-			[]interface{}{"", make([]string, 0)},
-			[]interface{}{"", make([]string, 0)},
-		},
-	}
-	var err error
-	if err = f(&v); err != nil {
-		return err
-	}
-	p.Name = v[0].(string)
-	for _, attr := range v[1].([]interface{}) {
-		name, ns, err := parseAttribute(attr.([]interface{}))
-		if err != nil {
-			return fmt.Errorf("Preset %+q has bad %+q attribute: %s", p.Name, name, err)
-		}
-		switch name {
-		case "alwaysShownStates":
-			p.AlwaysShownStates = make([]StateType, len(ns))
-			for i, n := range ns {
-				p.AlwaysShownStates[i] = StateType(n)
-			}
-		case "filteredStates":
-			p.FilteredStates = make([]StateType, len(ns))
-			for i, n := range ns {
-				p.FilteredStates[i] = StateType(n)
-			}
-		case "groups":
-			p.Groups = make([]InvGroup, len(ns))
-			for i, n := range ns {
-				p.Groups[i] = InvGroup(n)
-			}
-		default:
-			return fmt.Errorf("Preset %+q has unknown attribute: %+q", p.Name, name)
-		}
-	}
-	return nil
+func (ig InvGroup) MarshalYAML() (interface{}, error) {
+	return fmt.Sprintf("%d %s %s", int(ig), commentMarker, ig.name()), nil
 }
 
-func (p *Preset) String() string {
-	return p.Name
+type StateType int
+
+func (st StateType) name() string {
+	s, ok := stateTypes[st]
+	if !ok {
+		s = "Unknown StateType"
+	}
+	return s
 }
 
-func parseAttribute(entry []interface{}) (string, []int, error) {
-	if len(entry) != 2 {
-		return "", nil, fmt.Errorf("attribute has wrong length (got %d, expected 2): %+q",
-			len(entry), entry)
+func (st StateType) String() string {
+	return fmt.Sprintf("%s (%d)", st.name(), int(st))
+}
+
+func (st StateType) MarshalYAML() (interface{}, error) {
+	return fmt.Sprintf("%d %s %s", int(st), commentMarker, st.name()), nil
+}
+
+type ShipLabelState int
+
+func (ss ShipLabelState) name() string {
+	switch ss {
+	case 0:
+		return "Disabled"
+	case 1:
+		return "Enabled"
+	default:
+		return "Unknown ShipLabelState"
 	}
-	name := entry[0].(string)
-	vals := entry[1].([]interface{})
-	var ns []int
-	for _, val := range vals {
-		switch val := val.(type) {
-		case int:
-			ns = append(ns, val)
-		case string:
-			ss := strings.SplitN(val, " ", 2)
-			if len(ss) != 2 {
-				return name, nil, fmt.Errorf("attribute value entry has format: %+q", val)
-			}
-			n, err := strconv.Atoi(ss[0])
-			if err != nil {
-				return name, nil, fmt.Errorf("attribute value not parsable as int: %+q", ss[0])
-			}
-			ns = append(ns, n)
-		default:
-			return name, nil, fmt.Errorf("attribute value entry has unexpected type: %T", val)
-		}
+}
+
+func (ss ShipLabelState) String() string {
+	return fmt.Sprintf("%s (%d)", ss.name(), int(ss))
+}
+
+func (ss ShipLabelState) MarshalYAML() (interface{}, error) {
+	return fmt.Sprintf("%d %s %s", int(ss), commentMarker, ss.name()), nil
+}
+
+type NullableString string
+
+func (ns NullableString) MarshalYAML() (interface{}, error) {
+	if len(ns) == 0 {
+		return nil, nil
 	}
-	return name, ns, nil
+	return string(ns), nil
 }

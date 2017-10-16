@@ -15,13 +15,19 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
 	"flag"
 	"fmt"
 	"log"
 	"os"
+	"regexp"
+	"strings"
 
 	"gopkg.in/yaml.v2"
 )
+
+const commentMarker = "EOTCOMMENTMARKER"
 
 var cfgFile = flag.String("f", "", "Overview file to operate on")
 
@@ -53,41 +59,24 @@ func main() {
 		log.Printf("ERROR: unable to marshal back to yaml: %s", err)
 		os.Exit(1)
 	}
-	fmt.Printf("%s\n", string(b))
+	fmt.Printf("%s", string(unescapeComments(b)))
 }
 
-type InvGroup int
+var quotesRx = regexp.MustCompile(`^(?P<start>^\s*(- )+)(?P<entry>'?\d+ ` + commentMarker + ` .+)$`)
 
-func (ig InvGroup) name() string {
-	s, ok := invGroups[ig]
-	if !ok {
-		s = "Unknown InvGroup"
+func unescapeComments(b []byte) []byte {
+	var out bytes.Buffer
+	s := bufio.NewScanner(bytes.NewReader(b))
+	for s.Scan() {
+		line := s.Bytes()
+		matches := quotesRx.FindStringSubmatch(string(line))
+		if len(matches) > 0 {
+			out.WriteString(matches[1])
+			out.WriteString(strings.Replace(matches[3], commentMarker, "#", 1))
+		} else {
+			out.Write(line)
+		}
+		out.WriteString("\r\n")
 	}
-	return s
-}
-
-func (ig InvGroup) String() string {
-	return fmt.Sprintf("%s (%d)", ig.name(), int(ig))
-}
-
-func (ig InvGroup) MarshalYAML() (interface{}, error) {
-	return fmt.Sprintf("%d # %s", int(ig), ig.name()), nil
-}
-
-type StateType int
-
-func (st StateType) name() string {
-	s, ok := stateTypes[st]
-	if !ok {
-		s = "Unknown StateType"
-	}
-	return s
-}
-
-func (st StateType) String() string {
-	return fmt.Sprintf("%s (%d)", st.name(), int(st))
-}
-
-func (st StateType) MarshalYAML() (interface{}, error) {
-	return fmt.Sprintf("%d # %s", int(st), st.name()), nil
+	return out.Bytes()
 }

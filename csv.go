@@ -98,6 +98,7 @@ func loadCsvEntries(r io.Reader, nameIdx int) ([]csvEntry, error) {
 	var entries []csvEntry
 	csvr := csv.NewReader(r)
 	csvr.FieldsPerRecord = nameIdx + 1
+	csvr.LazyQuotes = true
 	for {
 		record, err := csvr.Read()
 		if err == io.EOF {
