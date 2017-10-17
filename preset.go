@@ -98,13 +98,13 @@ func (ps *presetStates) MarshalYAML() (interface{}, error) {
 }
 
 type presetGroups struct {
-	Groups []InvGroup
+	Groups []InvGroupId
 }
 
 func newPresetGroup(ns []int) *presetGroups {
-	pg := &presetGroups{Groups: make([]InvGroup, len(ns))}
+	pg := &presetGroups{Groups: make([]InvGroupId, len(ns))}
 	for i, n := range ns {
-		pg.Groups[i] = InvGroup(n)
+		pg.Groups[i] = InvGroupId(n)
 	}
 	return pg
 }

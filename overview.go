@@ -50,24 +50,6 @@ type Overview struct {
 	UserSettings        []*UserSetting    `yaml:"userSettings"`
 }
 
-type InvGroup int
-
-func (ig InvGroup) name() string {
-	s, ok := invGroups[ig]
-	if !ok {
-		return "Unknown InvGroup"
-	}
-	return strings.TrimSpace(s)
-}
-
-func (ig InvGroup) String() string {
-	return fmt.Sprintf("%s (%d)", ig.name(), int(ig))
-}
-
-func (ig InvGroup) MarshalYAML() (interface{}, error) {
-	return fmt.Sprintf("%d %s %s", int(ig), commentMarker, ig.name()), nil
-}
-
 type StateType int
 
 func (st StateType) name() string {

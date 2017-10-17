@@ -21,113 +21,174 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"log"
-	"os"
+	"io/ioutil"
 	"strconv"
 	"strings"
 )
 
 const (
 	invGroupPath    = "data/invGroups.csv"
-	invGroupPathBz2 = invGroupPath + ".bz2"
 	invGroupPathUrl = "https://www.fuzzwork.co.uk/dump/latest/invGroups.csv.bz2"
+	invCatPath      = "data/invCategories.csv"
+	invCatPathUrl   = "https://www.fuzzwork.co.uk/dump/latest/invCategories.csv.bz2"
 	filterStatePath = "data/filterStates.csv"
 )
 
+var catFile = flag.String("categories", "",
+	fmt.Sprintf("Use external inventory categories CSV file."))
 var groupsFile = flag.String("groups", "", fmt.Sprintf("Use external inventory groups CSV file."))
 var stateFile = flag.String("states", "", "Use external filter states CSV file")
 
-func loadGroups() (map[InvGroup]string, error) {
+type readerCloser struct {
+	*bytes.Reader
+}
+
+func (cc readerCloser) Close() error {
+	return nil
+}
+
+func loadFile(path, assetPath string) (io.Reader, error) {
 	var err error
 	var bz2 bool
-	var reader io.Reader
-	if *groupsFile != "" {
-		var f *os.File
-		if f, err = os.Open(*groupsFile); err != nil {
+	var data []byte
+	if path != "" {
+		if data, err = ioutil.ReadFile(path); err != nil {
 			return nil, err
 		}
-		defer f.Close()
-		reader = f
-		bz2 = strings.HasSuffix(strings.ToLower(*groupsFile), "bz2")
+		bz2 = strings.HasSuffix(strings.ToLower(path), "bz2")
 	} else {
-		data, err := Asset(invGroupPath)
-		if err != nil {
-			data, err = Asset(invGroupPathBz2)
+		if data, err = Asset(assetPath); err != nil {
+			data, err = Asset(assetPath + ".bz2")
+			if err != nil {
+				return nil, err
+			}
 			bz2 = true
 		}
-		if err != nil {
-			log.Printf("Download the inventory groups file from %s", invGroupPathUrl)
-			return nil, err
-		}
-		reader = bytes.NewReader(data)
 	}
+	reader := bytes.NewReader(data)
 	if bz2 {
-		reader = bzip2.NewReader(reader)
+		return bzip2.NewReader(reader), nil
 	}
-	entries, err := loadCsvEntries(reader, 2)
+	return reader, nil
+}
+
+type InvCategoryId int
+
+func (ic InvCategoryId) name() string {
+	s, ok := invCategories[ic]
+	if !ok {
+		return "Unknown InvCategory"
+	}
+	return strings.TrimSpace(s)
+}
+
+func (ic InvCategoryId) String() string {
+	return fmt.Sprintf("%s (%d)", ic.name(), int(ic))
+}
+
+func loadCategories() (map[InvCategoryId]string, error) {
+	reader, err := loadFile(*catFile, invCatPath)
+	if err != nil {
+		return nil, fmt.Errorf("Unable to load inventory categories CSV file: %v", err)
+	}
+	records, err := loadCsvEntries(reader, 4)
 	if err != nil {
 		return nil, err
 	}
-	m := make(map[InvGroup]string, len(entries))
-	for i := range entries {
-		entry := &entries[i]
-		m[InvGroup(entry.i)] = entry.s
-	}
-	return m, nil
-}
-
-func loadStates() (map[StateType]string, error) {
-	var reader io.Reader
-	if *stateFile != "" {
-		f, err := os.Open(*stateFile)
+	m := make(map[InvCategoryId]string, len(records))
+	for _, record := range records {
+		id, err := strconv.Atoi(record[0])
 		if err != nil {
-			return nil, err
-		}
-		defer f.Close()
-		reader = f
-	} else {
-		data, err := Asset(filterStatePath)
-		if err != nil {
-			return nil, err
-		}
-		reader = bytes.NewReader(data)
-	}
-	entries, err := loadCsvEntries(reader, 1)
-	if err != nil {
-		return nil, err
-	}
-	m := make(map[StateType]string, len(entries))
-	for i := range entries {
-		entry := &entries[i]
-		m[StateType(entry.i)] = entry.s
-	}
-	return m, nil
-}
-
-func loadCsvEntries(r io.Reader, nameIdx int) ([]csvEntry, error) {
-	var entries []csvEntry
-	csvr := csv.NewReader(r)
-	csvr.FieldsPerRecord = nameIdx + 1
-	csvr.LazyQuotes = true
-	for {
-		record, err := csvr.Read()
-		if err == io.EOF {
-			break
-		}
-		n, err := strconv.Atoi(record[0])
-		if err != nil {
-			if len(stateTypes) == 0 {
+			if len(m) == 0 {
 				// Skip the header line, if present.
 				continue
 			}
 			return nil, err
 		}
-		entries = append(entries, csvEntry{n, record[nameIdx]})
+		m[InvCategoryId(id)] = record[1]
 	}
-	return entries, nil
+	return m, nil
 }
 
-type csvEntry struct {
-	i int
-	s string
+type InvGroupId int
+
+func (ig InvGroupId) name() string {
+	g, ok := invGroups[ig]
+	if !ok {
+		return "Unknown InvGroup"
+	}
+	return fmt.Sprintf("%s -- %s", g.Cat, strings.TrimSpace(g.Name))
+}
+
+func (ig InvGroupId) String() string {
+	return fmt.Sprintf("%s (%d)", ig.name(), int(ig))
+}
+
+func (ig InvGroupId) MarshalYAML() (interface{}, error) {
+	return fmt.Sprintf("%d %s %s", int(ig), commentMarker, ig.name()), nil
+}
+
+type InvGroup struct {
+	Id   InvGroupId
+	Cat  InvCategoryId
+	Name string
+}
+
+func loadGroups() (map[InvGroupId]*InvGroup, error) {
+	reader, err := loadFile(*groupsFile, invGroupPath)
+	if err != nil {
+		return nil, fmt.Errorf("Unable to load inventory groups CSV file: %v", err)
+	}
+	records, err := loadCsvEntries(reader, 9)
+	if err != nil {
+		return nil, err
+	}
+	m := make(map[InvGroupId]*InvGroup, len(records))
+	for _, record := range records {
+		id, err := strconv.Atoi(record[0])
+		if err != nil {
+			if len(m) == 0 {
+				// Skip the header line, if present.
+				continue
+			}
+			return nil, err
+		}
+		catId, err := strconv.Atoi(record[1])
+		if err != nil {
+			return nil, err
+		}
+		g := &InvGroup{Id: InvGroupId(id), Cat: InvCategoryId(catId), Name: record[2]}
+		m[g.Id] = g
+	}
+	return m, nil
+}
+
+func loadStates() (map[StateType]string, error) {
+	reader, err := loadFile(*stateFile, filterStatePath)
+	if err != nil {
+		return nil, fmt.Errorf("Unable to load filter states CSV file: %v", err)
+	}
+	records, err := loadCsvEntries(reader, 2)
+	if err != nil {
+		return nil, err
+	}
+	m := make(map[StateType]string, len(records))
+	for _, record := range records {
+		id, err := strconv.Atoi(record[0])
+		if err != nil {
+			if len(m) == 0 {
+				// Skip the header line, if present.
+				continue
+			}
+			return nil, err
+		}
+		m[StateType(id)] = record[1]
+	}
+	return m, nil
+}
+
+func loadCsvEntries(r io.Reader, nFields int) ([][]string, error) {
+	csvr := csv.NewReader(r)
+	csvr.FieldsPerRecord = nFields
+	return csvr.ReadAll()
 }

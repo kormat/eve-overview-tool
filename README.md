@@ -61,6 +61,10 @@ To rebuild `bindata.go`:
    ```
    go get -u github.com/jteeuwen/go-bindata/...
    ```
+1. Get latest Eve SDE [inventory category file](https://www.fuzzwork.co.uk/dump/latest/invCategories.csv.bz2):
+   ```
+   wget https://www.fuzzwork.co.uk/dump/latest/invCategories.csv.bz2 -O data/invCategories.csv.bz2
+   ```
 1. Get latest Eve SDE [inventory groups file](https://www.fuzzwork.co.uk/dump/latest/invGroups.csv.bz2):
    ```
    wget https://www.fuzzwork.co.uk/dump/latest/invGroups.csv.bz2 -O data/invGroups.csv.bz2

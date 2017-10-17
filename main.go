@@ -27,11 +27,12 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-const commentMarker = "EOTCOMMENTMARKER"
+const commentMarker = "EOTCOMMENT"
 
 var cfgFile = flag.String("f", "", "Overview file to operate on")
 
-var invGroups map[InvGroup]string
+var invGroups map[InvGroupId]*InvGroup
+var invCategories map[InvCategoryId]string
 var stateTypes map[StateType]string
 
 func main() {
@@ -39,6 +40,10 @@ func main() {
 	flag.Parse()
 	if *cfgFile == "" {
 		log.Printf("ERROR: No overview file specified.")
+		os.Exit(1)
+	}
+	if invCategories, err = loadCategories(); err != nil {
+		log.Printf("ERROR: unable to load inventory categories CSV file: %s", err)
 		os.Exit(1)
 	}
 	if invGroups, err = loadGroups(); err != nil {
