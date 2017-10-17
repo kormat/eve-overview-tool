@@ -62,7 +62,7 @@ func main() {
 	fmt.Printf("%s", string(unescapeComments(b)))
 }
 
-var quotesRx = regexp.MustCompile(`^(?P<start>^\s*(- )+)(?P<entry>'?\d+ ` + commentMarker + ` .+)$`)
+var quotesRx = regexp.MustCompile(`^(?P<start>^\s*(- )+)'?(?P<entry>\d+ ` + commentMarker + ` .+)$`)
 
 func unescapeComments(b []byte) []byte {
 	var out bytes.Buffer

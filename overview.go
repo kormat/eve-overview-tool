@@ -17,6 +17,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"strings"
 
 	"gopkg.in/yaml.v2"
 )
@@ -54,9 +55,9 @@ type InvGroup int
 func (ig InvGroup) name() string {
 	s, ok := invGroups[ig]
 	if !ok {
-		s = "Unknown InvGroup"
+		return "Unknown InvGroup"
 	}
-	return s
+	return strings.TrimSpace(s)
 }
 
 func (ig InvGroup) String() string {
@@ -72,9 +73,9 @@ type StateType int
 func (st StateType) name() string {
 	s, ok := stateTypes[st]
 	if !ok {
-		s = "Unknown StateType"
+		return "Unknown StateType"
 	}
-	return s
+	return strings.TrimSpace(s)
 }
 
 func (st StateType) String() string {
