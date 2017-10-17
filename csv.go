@@ -15,6 +15,7 @@
 package main
 
 import (
+	"bytes"
 	"compress/bzip2"
 	"encoding/csv"
 	"flag"
@@ -27,42 +28,41 @@ import (
 )
 
 const (
-	invGroupPath    = "invGroups.csv"
+	invGroupPath    = "data/invGroups.csv"
 	invGroupPathBz2 = invGroupPath + ".bz2"
 	invGroupPathUrl = "https://www.fuzzwork.co.uk/dump/latest/invGroups.csv.bz2"
+	filterStatePath = "data/filterStates.csv"
 )
 
-var typesFile = flag.String("types", "", fmt.Sprintf("Inventory groups CSV file. Will try "+
-	"`%s` and `%s.bz2` in order if not specified", invGroupPath, invGroupPathBz2))
-var stateFile = flag.String("states", "filterStates.csv", "Filter states CSV file")
+var groupsFile = flag.String("groups", "", fmt.Sprintf("Use external inventory groups CSV file."))
+var stateFile = flag.String("states", "", "Use external filter states CSV file")
 
 func loadGroups() (map[InvGroup]string, error) {
-	var f *os.File
 	var err error
 	var bz2 bool
-	if *typesFile != "" {
-		if f, err = os.Open(*typesFile); err != nil {
+	var reader io.Reader
+	if *groupsFile != "" {
+		var f *os.File
+		if f, err = os.Open(*groupsFile); err != nil {
 			return nil, err
 		}
-		bz2 = strings.HasSuffix(strings.ToLower(*typesFile), "bz2")
+		defer f.Close()
+		reader = f
+		bz2 = strings.HasSuffix(strings.ToLower(*groupsFile), "bz2")
 	} else {
-		f, err = os.Open(invGroupPath)
-		if os.IsNotExist(err) {
-			f, err = os.Open(invGroupPathBz2)
+		data, err := Asset(invGroupPath)
+		if err != nil {
+			data, err = Asset(invGroupPathBz2)
 			bz2 = true
 		}
-		if os.IsNotExist(err) {
+		if err != nil {
 			log.Printf("Download the inventory groups file from %s", invGroupPathUrl)
 			return nil, err
 		}
-		if err != nil {
-			return nil, err
-		}
+		reader = bytes.NewReader(data)
 	}
-	defer f.Close()
-	var reader io.Reader = f
 	if bz2 {
-		reader = bzip2.NewReader(f)
+		reader = bzip2.NewReader(reader)
 	}
 	entries, err := loadCsvEntries(reader, 2)
 	if err != nil {
@@ -77,12 +77,22 @@ func loadGroups() (map[InvGroup]string, error) {
 }
 
 func loadStates() (map[StateType]string, error) {
-	f, err := os.Open(*stateFile)
-	if err != nil {
-		return nil, err
+	var reader io.Reader
+	if *stateFile != "" {
+		f, err := os.Open(*stateFile)
+		if err != nil {
+			return nil, err
+		}
+		defer f.Close()
+		reader = f
+	} else {
+		data, err := Asset(filterStatePath)
+		if err != nil {
+			return nil, err
+		}
+		reader = bytes.NewReader(data)
 	}
-	defer f.Close()
-	entries, err := loadCsvEntries(f, 1)
+	entries, err := loadCsvEntries(reader, 1)
 	if err != nil {
 		return nil, err
 	}
