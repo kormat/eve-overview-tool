@@ -1,4 +1,4 @@
 .*.sw?
 *.csv.bz2
-*.yaml
+/*.yaml
 eve-overview-tool

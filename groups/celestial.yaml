@@ -1,0 +1,31 @@
+        - 6 # Sun
+        - 7 # Planet
+        - 8 # Moon
+        - 9 # Asteroid Belt
+        - 10 # Stargate
+        - 12 # Cargo Container
+        - 14 # Biomass
+        - 186 # Wreck
+        - 226 # Large Collidable Object
+        - 307 # Construction Platform
+        - 310 # Beacon
+        - 318 # Landmark
+        - 336 # Mobile Sentry Gun
+        - 340 # Secure Cargo Container
+        - 366 # Warp Gate
+        - 411 # Force Field
+        - 448 # Audit Log Secure Container
+        - 517 # Agents in Space
+        - 649 # Freight Container
+        - 711 # Harvestable Cloud
+        - 835 # Station Upgrade Platform
+        - 836 # Station Improvement Platform
+        - 874 # Disruptable Station Services
+        - 897 # Covert Beacon
+        - 920 # Effect Beacon
+        - 988 # Wormhole
+        - 1316 # Entosis Command Node
+        - 1704 # Super Weapon Beacon
+        - 1882 # MassiveEnvironments
+        - 1915 # Unknown InvGroup
+
