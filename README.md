@@ -39,6 +39,7 @@ presets:
         - 25 # Frigate
         - 26 # Cruiser
 ```
+See a full example [here](https://gist.github.com/kormat/098d3890015f4a5a81d0cd39ea5270d7)
 
 ## Installation
 
@@ -60,7 +61,7 @@ To rebuild `bindata.go`:
    ```
    go get -u github.com/jteeuwen/go-bindata/...
    ```
-1. Get latest Eve SDE inventory groups file:
+1. Get latest Eve SDE [inventory groups file](https://www.fuzzwork.co.uk/dump/latest/invGroups.csv.bz2):
    ```
    wget https://www.fuzzwork.co.uk/dump/latest/invGroups.csv.bz2 -O data/invGroups.csv.bz2
    ```
