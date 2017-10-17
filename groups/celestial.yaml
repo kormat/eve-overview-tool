@@ -1,31 +1,30 @@
-        - 6 # Sun
-        - 7 # Planet
-        - 8 # Moon
-        - 9 # Asteroid Belt
-        - 10 # Stargate
-        - 12 # Cargo Container
-        - 14 # Biomass
-        - 186 # Wreck
-        - 226 # Large Collidable Object
-        - 307 # Construction Platform
-        - 310 # Beacon
-        - 318 # Landmark
-        - 336 # Mobile Sentry Gun
-        - 340 # Secure Cargo Container
-        - 366 # Warp Gate
-        - 411 # Force Field
-        - 448 # Audit Log Secure Container
-        - 517 # Agents in Space
-        - 649 # Freight Container
-        - 711 # Harvestable Cloud
-        - 835 # Station Upgrade Platform
-        - 836 # Station Improvement Platform
-        - 874 # Disruptable Station Services
-        - 897 # Covert Beacon
-        - 920 # Effect Beacon
-        - 988 # Wormhole
-        - 1316 # Entosis Command Node
-        - 1704 # Super Weapon Beacon
-        - 1882 # MassiveEnvironments
+        - 6 # Celestial (2) -- Sun
+        - 7 # Celestial (2) -- Planet
+        - 8 # Celestial (2) -- Moon
+        - 9 # Celestial (2) -- Asteroid Belt
+        - 10 # Celestial (2) -- Stargate
+        - 12 # Celestial (2) -- Cargo Container
+        - 14 # Celestial (2) -- Biomass
+        - 186 # Celestial (2) -- Wreck
+        - 226 # Celestial (2) -- Large Collidable Object
+        - 307 # Celestial (2) -- Construction Platform
+        - 310 # Celestial (2) -- Beacon
+        - 318 # Celestial (2) -- Landmark
+        - 336 # Celestial (2) -- Mobile Sentry Gun
+        - 340 # Celestial (2) -- Secure Cargo Container
+        - 366 # Celestial (2) -- Warp Gate
+        - 411 # Celestial (2) -- Force Field
+        - 448 # Celestial (2) -- Audit Log Secure Container
+        - 517 # Celestial (2) -- Agents in Space
+        - 649 # Celestial (2) -- Freight Container
+        - 711 # Celestial (2) -- Harvestable Cloud
+        - 835 # Celestial (2) -- Station Upgrade Platform
+        - 836 # Celestial (2) -- Station Improvement Platform
+        - 874 # Celestial (2) -- Disruptable Station Services
+        - 897 # Celestial (2) -- Covert Beacon
+        - 920 # Celestial (2) -- Effect Beacon
+        - 988 # Celestial (2) -- Wormhole
+        - 1316 # Celestial (2) -- Entosis Command Node
+        - 1704 # Celestial (2) -- Super Weapon Beacon
+        - 1882 # Celestial (2) -- MassiveEnvironments
         - 1915 # Unknown InvGroup
-

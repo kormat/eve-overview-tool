@@ -1,44 +1,44 @@
-        - 25 # Frigate
-        - 26 # Cruiser
-        - 27 # Battleship
-        - 28 # Industrial
-        - 29 # Capsule
-        - 30 # Titan
-        - 31 # Shuttle
-        - 237 # Corvette
-        - 324 # Assault Frigate
-        - 358 # Heavy Assault Cruiser
-        - 380 # Deep Space Transport
-        - 381 # Elite Battleship
-        - 419 # Combat Battlecruiser
-        - 420 # Destroyer
-        - 463 # Mining Barge
-        - 485 # Dreadnought
-        - 513 # Freighter
-        - 540 # Command Ship
-        - 541 # Interdictor
-        - 543 # Exhumer
-        - 547 # Carrier
-        - 659 # Supercarrier
-        - 830 # Covert Ops
-        - 831 # Interceptor
-        - 832 # Logistics
-        - 833 # Force Recon Ship
-        - 834 # Stealth Bomber
-        - 883 # Capital Industrial Ship
-        - 893 # Electronic Attack Ship
-        - 894 # Heavy Interdiction Cruiser
-        - 898 # Black Ops
-        - 900 # Marauder
-        - 902 # Jump Freighter
-        - 906 # Combat Recon Ship
-        - 941 # Industrial Command Ship
-        - 963 # Strategic Cruiser
-        - 1022 # Prototype Exploration Ship
-        - 1201 # Attack Battlecruiser
-        - 1202 # Blockade Runner
-        - 1283 # Expedition Frigate
-        - 1305 # Tactical Destroyer
-        - 1527 # Logistics Frigate
-        - 1534 # Command Destroyer
-        - 1538 # Force Auxiliary
+        - 25 # Ship (6) -- Frigate
+        - 26 # Ship (6) -- Cruiser
+        - 27 # Ship (6) -- Battleship
+        - 28 # Ship (6) -- Industrial
+        - 29 # Ship (6) -- Capsule
+        - 30 # Ship (6) -- Titan
+        - 31 # Ship (6) -- Shuttle
+        - 237 # Ship (6) -- Corvette
+        - 324 # Ship (6) -- Assault Frigate
+        - 358 # Ship (6) -- Heavy Assault Cruiser
+        - 380 # Ship (6) -- Deep Space Transport
+        - 381 # Ship (6) -- Elite Battleship
+        - 419 # Ship (6) -- Combat Battlecruiser
+        - 420 # Ship (6) -- Destroyer
+        - 463 # Ship (6) -- Mining Barge
+        - 485 # Ship (6) -- Dreadnought
+        - 513 # Ship (6) -- Freighter
+        - 540 # Ship (6) -- Command Ship
+        - 541 # Ship (6) -- Interdictor
+        - 543 # Ship (6) -- Exhumer
+        - 547 # Ship (6) -- Carrier
+        - 659 # Ship (6) -- Supercarrier
+        - 830 # Ship (6) -- Covert Ops
+        - 831 # Ship (6) -- Interceptor
+        - 832 # Ship (6) -- Logistics
+        - 833 # Ship (6) -- Force Recon Ship
+        - 834 # Ship (6) -- Stealth Bomber
+        - 883 # Ship (6) -- Capital Industrial Ship
+        - 893 # Ship (6) -- Electronic Attack Ship
+        - 894 # Ship (6) -- Heavy Interdiction Cruiser
+        - 898 # Ship (6) -- Black Ops
+        - 900 # Ship (6) -- Marauder
+        - 902 # Ship (6) -- Jump Freighter
+        - 906 # Ship (6) -- Combat Recon Ship
+        - 941 # Ship (6) -- Industrial Command Ship
+        - 963 # Ship (6) -- Strategic Cruiser
+        - 1022 # Ship (6) -- Prototype Exploration Ship
+        - 1201 # Ship (6) -- Attack Battlecruiser
+        - 1202 # Ship (6) -- Blockade Runner
+        - 1283 # Ship (6) -- Expedition Frigate
+        - 1305 # Ship (6) -- Tactical Destroyer
+        - 1527 # Ship (6) -- Logistics Frigate
+        - 1534 # Ship (6) -- Command Destroyer
+        - 1538 # Ship (6) -- Force Auxiliary

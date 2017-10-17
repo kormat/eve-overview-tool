@@ -1,178 +1,178 @@
-        - 99 # Sentry Gun
-        - 180 # Protective Sentry Gun
-        - 185 # Pirate Drone
-        - 279 # LCO Drone
-        - 286 # Minor Threat
-        - 287 # Rogue Drone
-        - 297 # Convoy
-        - 298 # Convoy Drone
-        - 306 # Spawn Container
-        - 319 # Large Collidable Structure
-        - 323 # Billboard
-        - 383 # Destructible Sentry Gun
-        - 435 # Deadspace Overseer
-        - 494 # Deadspace Overseer's Structure
-        - 495 # Deadspace Overseer's Sentry
-        - 496 # Deadspace Overseer's Belongings
-        - 665 # Mission Amarr Empire Frigate
-        - 666 # Mission Amarr Empire Battlecruiser
-        - 667 # Mission Amarr Empire Battleship
-        - 668 # Mission Amarr Empire Cruiser
-        - 669 # Mission Amarr Empire Destroyer
-        - 670 # Mission Amarr Empire Other
-        - 671 # Mission Caldari State Frigate
-        - 672 # Mission Caldari State Battlecruiser
-        - 673 # Mission Caldari State Cruiser
-        - 674 # Mission Caldari State Battleship
-        - 675 # Mission Caldari State Other
-        - 676 # Mission Caldari State Destroyer
-        - 677 # Mission Gallente Federation Frigate
-        - 678 # Mission Gallente Federation Cruiser
-        - 679 # Mission Gallente Federation Destroyer
-        - 680 # Mission Gallente Federation Battleship
-        - 681 # Mission Gallente Federation Battlecruiser
-        - 682 # Mission Gallente Federation Other
-        - 683 # Mission Minmatar Republic Frigate
-        - 684 # Mission Minmatar Republic Destroyer
-        - 685 # Mission Minmatar Republic Battlecruiser
-        - 686 # Mission Minmatar Republic Other
-        - 687 # Mission Khanid Frigate
-        - 688 # Mission Khanid Destroyer
-        - 689 # Mission Khanid Cruiser
-        - 690 # Mission Khanid Battlecruiser
-        - 691 # Mission Khanid Battleship
-        - 692 # Mission Khanid Other
-        - 693 # Mission CONCORD Frigate
-        - 694 # Mission CONCORD Destroyer
-        - 695 # Mission CONCORD Cruiser
-        - 696 # Mission CONCORD Battlecruiser
-        - 697 # Mission CONCORD Battleship
-        - 698 # Mission CONCORD Other
-        - 699 # Mission Mordu Frigate
-        - 700 # Mission Mordu Destroyer
-        - 701 # Mission Mordu Cruiser
-        - 702 # Mission Mordu Battlecruiser
-        - 703 # Mission Mordu Battleship
-        - 704 # Mission Mordu Other
-        - 705 # Mission Minmatar Republic Cruiser
-        - 706 # Mission Minmatar Republic Battleship
-        - 715 # Destructible Agents In Space
-        - 784 # Large Collidable Ship
-        - 922 # Capture Point
-        - 924 # Mission Faction Battleship
-        - 925 # FW Infrastructure Hub
-        - 927 # Mission Faction Industrials
-        - 952 # Mission Container
-        - 1006 # Mission Faction Cruiser
-        - 1007 # Mission Faction Frigate
-        - 1166 # FW Minmatar Republic Frigate
-        - 1167 # FW Caldari State Frigate
-        - 1168 # FW Gallente Federation Frigate
-        - 1169 # FW Amarr Empire Frigate
-        - 1175 # FW Amarr Empire Destroyer
-        - 1176 # FW Caldari State Destroyer
-        - 1177 # FW Gallente Federation Destroyer
-        - 1178 # FW Minmatar Republic Destroyer
-        - 1179 # FW Amarr Empire Cruiser
-        - 1180 # FW Caldari State Cruiser
-        - 1181 # FW Gallente Federation Cruiser
-        - 1182 # FW Minmatar Republic Cruiser
-        - 1183 # FW Amarr Empire Battlecruiser
-        - 1184 # FW Caldari State Battlecruiser
-        - 1185 # FW Gallente Federation Battlecruiser
-        - 1186 # FW Minmatar Republic Battlecruiser
-        - 1207 # Scatter Container
-        - 1285 # Asteroid Mordus Legion Commander Frigate
-        - 1286 # Asteroid Mordus Legion Commander Cruiser
-        - 1287 # Asteroid Mordus Legion Commander Battleship
-        - 1307 # Roaming Sleepers Cruiser
-        - 1310 # Drifter Battleship
-        - 1402 # Amarr Navy Roaming Battleship
-        - 1411 # Amarr Navy Roaming Cruiser
-        - 1412 # Amarr Navy Roaming Capital
-        - 1413 # Amarr Navy Roaming Logistics
-        - 1414 # Amarr Navy Roaming Frigate
-        - 1452 # Blood Raider Event Battleship
-        - 1453 # Blood Raider Event Frigate
-        - 1454 # Blood Raider Event Cruiser
-        - 1455 # Blood Raider Event Battlecruiser
-        - 1465 # Mission Generic Supercarrier
-        - 1529 # Deadspace Sleeper Upgraded Avenger
-        - 1530 # Drifter Response Battleship
-        - 1566 # Serpentis Event Frigate
-        - 1567 # Serpentis Event Cruiser
-        - 1568 # Serpentis Event Battlecruiser
-        - 1664 # Guristas Event Frigate
-        - 1665 # Guristas Event Cruiser
-        - 1666 # Guristas Event Battlecruiser
-        - 1667 # Guristas Event Battleship
-        - 1681 # Asteroid Angel Cartel Dreadnought
-        - 1682 # Asteroid Angel Cartel Titan
-        - 1683 # Asteroid Blood Raider Dreadnought
-        - 1684 # Asteroid Blood Raider Titan
-        - 1685 # Asteroid Guristas Dreadnought
-        - 1686 # Asteroid Guristas Titan
-        - 1687 # Asteroid Sansha's Nation Dreadnought
-        - 1688 # Asteroid Sansha's Nation Supercarrier
-        - 1689 # Asteroid Serpentis Dreadnought
-        - 1690 # Asteroid Serpentis Titan
-        - 1691 # Asteroid Rogue Drone Carrier
-        - 1692 # Asteroid Rogue Drone Supercarrier
-        - 1720 # Roaming Serpentis Battleship
-        - 1721 # Roaming Serpentis Cruiser
-        - 1722 # Roaming Serpentis Frigate
-        - 1724 # Angel Cartel Event Frigate
-        - 1725 # Angel Cartel Event Cruiser
-        - 1726 # Angel Cartel Event Battlecruiser
-        - 1727 # Roaming Angel Cartel Battleship
-        - 1728 # Roaming Angel Cartel Cruiser
-        - 1729 # Roaming Angel Cartel Frigate
-        - 1731 # Event Container
-        - 1734 # Roaming Blood Raider Frigate
-        - 1735 # Roaming Blood Raider Cruiser
-        - 1736 # Roaming Blood Raider Battlecruiser
-        - 1737 # Roaming Blood Raider Battleship
-        - 1759 # Amarr Event Frigate
-        - 1761 # Amarr Event Cruiser
-        - 1762 # Amarr Event Battlecruiser
-        - 1764 # ♦ Mining Frigate
-        - 1765 # ♦ Mining Barge
-        - 1766 # ♦ Mining Exhumer
-        - 1767 # ♦ Mining Hauler
-        - 1768 # Tutorial Seekers
-        - 1788 # Hidden Zenith Drifters
-        - 1789 # Hidden Zenith Amarr Battleship
-        - 1790 # Hidden Zenith Amarr Cruiser
-        - 1791 # Hidden Zenith Amarr Frigate
-        - 1792 # Hidden Zenith Caldari Battleship
-        - 1793 # Hidden Zenith Caldari Cruiser
-        - 1794 # Hidden Zenith Caldari Frigate
-        - 1795 # Hidden Zenith Gallente Battleship
-        - 1796 # Hidden Zenith Gallente Cruiser
-        - 1797 # Hidden Zenith Gallente Frigate
-        - 1798 # Hidden Zenith Minmatar Battleship
-        - 1799 # Hidden Zenith Minmatar Cruiser
-        - 1800 # Hidden Zenith Minmatar Frigate
-        - 1803 # ♦ Frigate
-        - 1804 # Hidden Zenith Amarr Capital
-        - 1805 # Hidden Zenith Caldari Capital
-        - 1806 # Hidden Zenith Gallente Capital
-        - 1807 # Hidden Zenith Minmatar Capital
-        - 1813 # ♦ Cruiser
-        - 1814 # ♦ Battleship
-        - 1872 # Structure Entities
-        - 1878 # ♦ Titan
-        - 1879 # ♦ Force Auxiliary
-        - 1880 # ♦ Dreadnought
-        - 1895 # Event Ships
-        - 1896 # ♦ Freighter
-        - 1904 # ♦ RW Pirate Frigate
-        - 1905 # ♦ RW Pirate Cruiser
-        - 1906 # ♦ RW Pirate Battleship
-        - 1907 # ♦ RW Empire Frigate
-        - 1908 # ♦ RW Empire Cruiser
-        - 1909 # ♦ RW Empire Battlecruiser
-        - 1910 # ♦ RW Empire Battleship
+        - 99 # Entity (11) -- Sentry Gun
+        - 180 # Entity (11) -- Protective Sentry Gun
+        - 185 # Entity (11) -- Pirate Drone
+        - 279 # Entity (11) -- LCO Drone
+        - 286 # Entity (11) -- Minor Threat
+        - 287 # Entity (11) -- Rogue Drone
+        - 297 # Entity (11) -- Convoy
+        - 298 # Entity (11) -- Convoy Drone
+        - 306 # Entity (11) -- Spawn Container
+        - 319 # Entity (11) -- Large Collidable Structure
+        - 323 # Entity (11) -- Billboard
+        - 383 # Entity (11) -- Destructible Sentry Gun
+        - 435 # Entity (11) -- Deadspace Overseer
+        - 494 # Entity (11) -- Deadspace Overseer's Structure
+        - 495 # Entity (11) -- Deadspace Overseer's Sentry
+        - 496 # Entity (11) -- Deadspace Overseer's Belongings
+        - 665 # Entity (11) -- Mission Amarr Empire Frigate
+        - 666 # Entity (11) -- Mission Amarr Empire Battlecruiser
+        - 667 # Entity (11) -- Mission Amarr Empire Battleship
+        - 668 # Entity (11) -- Mission Amarr Empire Cruiser
+        - 669 # Entity (11) -- Mission Amarr Empire Destroyer
+        - 670 # Entity (11) -- Mission Amarr Empire Other
+        - 671 # Entity (11) -- Mission Caldari State Frigate
+        - 672 # Entity (11) -- Mission Caldari State Battlecruiser
+        - 673 # Entity (11) -- Mission Caldari State Cruiser
+        - 674 # Entity (11) -- Mission Caldari State Battleship
+        - 675 # Entity (11) -- Mission Caldari State Other
+        - 676 # Entity (11) -- Mission Caldari State Destroyer
+        - 677 # Entity (11) -- Mission Gallente Federation Frigate
+        - 678 # Entity (11) -- Mission Gallente Federation Cruiser
+        - 679 # Entity (11) -- Mission Gallente Federation Destroyer
+        - 680 # Entity (11) -- Mission Gallente Federation Battleship
+        - 681 # Entity (11) -- Mission Gallente Federation Battlecruiser
+        - 682 # Entity (11) -- Mission Gallente Federation Other
+        - 683 # Entity (11) -- Mission Minmatar Republic Frigate
+        - 684 # Entity (11) -- Mission Minmatar Republic Destroyer
+        - 685 # Entity (11) -- Mission Minmatar Republic Battlecruiser
+        - 686 # Entity (11) -- Mission Minmatar Republic Other
+        - 687 # Entity (11) -- Mission Khanid Frigate
+        - 688 # Entity (11) -- Mission Khanid Destroyer
+        - 689 # Entity (11) -- Mission Khanid Cruiser
+        - 690 # Entity (11) -- Mission Khanid Battlecruiser
+        - 691 # Entity (11) -- Mission Khanid Battleship
+        - 692 # Entity (11) -- Mission Khanid Other
+        - 693 # Entity (11) -- Mission CONCORD Frigate
+        - 694 # Entity (11) -- Mission CONCORD Destroyer
+        - 695 # Entity (11) -- Mission CONCORD Cruiser
+        - 696 # Entity (11) -- Mission CONCORD Battlecruiser
+        - 697 # Entity (11) -- Mission CONCORD Battleship
+        - 698 # Entity (11) -- Mission CONCORD Other
+        - 699 # Entity (11) -- Mission Mordu Frigate
+        - 700 # Entity (11) -- Mission Mordu Destroyer
+        - 701 # Entity (11) -- Mission Mordu Cruiser
+        - 702 # Entity (11) -- Mission Mordu Battlecruiser
+        - 703 # Entity (11) -- Mission Mordu Battleship
+        - 704 # Entity (11) -- Mission Mordu Other
+        - 705 # Entity (11) -- Mission Minmatar Republic Cruiser
+        - 706 # Entity (11) -- Mission Minmatar Republic Battleship
+        - 715 # Entity (11) -- Destructible Agents In Space
+        - 784 # Entity (11) -- Large Collidable Ship
+        - 922 # Entity (11) -- Capture Point
+        - 924 # Entity (11) -- Mission Faction Battleship
+        - 925 # Entity (11) -- FW Infrastructure Hub
+        - 927 # Entity (11) -- Mission Faction Industrials
+        - 952 # Entity (11) -- Mission Container
+        - 1006 # Entity (11) -- Mission Faction Cruiser
+        - 1007 # Entity (11) -- Mission Faction Frigate
+        - 1166 # Entity (11) -- FW Minmatar Republic Frigate
+        - 1167 # Entity (11) -- FW Caldari State Frigate
+        - 1168 # Entity (11) -- FW Gallente Federation Frigate
+        - 1169 # Entity (11) -- FW Amarr Empire Frigate
+        - 1175 # Entity (11) -- FW Amarr Empire Destroyer
+        - 1176 # Entity (11) -- FW Caldari State Destroyer
+        - 1177 # Entity (11) -- FW Gallente Federation Destroyer
+        - 1178 # Entity (11) -- FW Minmatar Republic Destroyer
+        - 1179 # Entity (11) -- FW Amarr Empire Cruiser
+        - 1180 # Entity (11) -- FW Caldari State Cruiser
+        - 1181 # Entity (11) -- FW Gallente Federation Cruiser
+        - 1182 # Entity (11) -- FW Minmatar Republic Cruiser
+        - 1183 # Entity (11) -- FW Amarr Empire Battlecruiser
+        - 1184 # Entity (11) -- FW Caldari State Battlecruiser
+        - 1185 # Entity (11) -- FW Gallente Federation Battlecruiser
+        - 1186 # Entity (11) -- FW Minmatar Republic Battlecruiser
+        - 1207 # Entity (11) -- Scatter Container
+        - 1285 # Entity (11) -- Asteroid Mordus Legion Commander Frigate
+        - 1286 # Entity (11) -- Asteroid Mordus Legion Commander Cruiser
+        - 1287 # Entity (11) -- Asteroid Mordus Legion Commander Battleship
+        - 1307 # Entity (11) -- Roaming Sleepers Cruiser
+        - 1310 # Entity (11) -- Drifter Battleship
+        - 1402 # Entity (11) -- Amarr Navy Roaming Battleship
+        - 1411 # Entity (11) -- Amarr Navy Roaming Cruiser
+        - 1412 # Entity (11) -- Amarr Navy Roaming Capital
+        - 1413 # Entity (11) -- Amarr Navy Roaming Logistics
+        - 1414 # Entity (11) -- Amarr Navy Roaming Frigate
+        - 1452 # Entity (11) -- Blood Raider Event Battleship
+        - 1453 # Entity (11) -- Blood Raider Event Frigate
+        - 1454 # Entity (11) -- Blood Raider Event Cruiser
+        - 1455 # Entity (11) -- Blood Raider Event Battlecruiser
+        - 1465 # Entity (11) -- Mission Generic Supercarrier
+        - 1529 # Entity (11) -- Deadspace Sleeper Upgraded Avenger
+        - 1530 # Entity (11) -- Drifter Response Battleship
+        - 1566 # Entity (11) -- Serpentis Event Frigate
+        - 1567 # Entity (11) -- Serpentis Event Cruiser
+        - 1568 # Entity (11) -- Serpentis Event Battlecruiser
+        - 1664 # Entity (11) -- Guristas Event Frigate
+        - 1665 # Entity (11) -- Guristas Event Cruiser
+        - 1666 # Entity (11) -- Guristas Event Battlecruiser
+        - 1667 # Entity (11) -- Guristas Event Battleship
+        - 1681 # Entity (11) -- Asteroid Angel Cartel Dreadnought
+        - 1682 # Entity (11) -- Asteroid Angel Cartel Titan
+        - 1683 # Entity (11) -- Asteroid Blood Raider Dreadnought
+        - 1684 # Entity (11) -- Asteroid Blood Raider Titan
+        - 1685 # Entity (11) -- Asteroid Guristas Dreadnought
+        - 1686 # Entity (11) -- Asteroid Guristas Titan
+        - 1687 # Entity (11) -- Asteroid Sansha's Nation Dreadnought
+        - 1688 # Entity (11) -- Asteroid Sansha's Nation Supercarrier
+        - 1689 # Entity (11) -- Asteroid Serpentis Dreadnought
+        - 1690 # Entity (11) -- Asteroid Serpentis Titan
+        - 1691 # Entity (11) -- Asteroid Rogue Drone Carrier
+        - 1692 # Entity (11) -- Asteroid Rogue Drone Supercarrier
+        - 1720 # Entity (11) -- Roaming Serpentis Battleship
+        - 1721 # Entity (11) -- Roaming Serpentis Cruiser
+        - 1722 # Entity (11) -- Roaming Serpentis Frigate
+        - 1724 # Entity (11) -- Angel Cartel Event Frigate
+        - 1725 # Entity (11) -- Angel Cartel Event Cruiser
+        - 1726 # Entity (11) -- Angel Cartel Event Battlecruiser
+        - 1727 # Entity (11) -- Roaming Angel Cartel Battleship
+        - 1728 # Entity (11) -- Roaming Angel Cartel Cruiser
+        - 1729 # Entity (11) -- Roaming Angel Cartel Frigate
+        - 1731 # Entity (11) -- Event Container
+        - 1734 # Entity (11) -- Roaming Blood Raider Frigate
+        - 1735 # Entity (11) -- Roaming Blood Raider Cruiser
+        - 1736 # Entity (11) -- Roaming Blood Raider Battlecruiser
+        - 1737 # Entity (11) -- Roaming Blood Raider Battleship
+        - 1759 # Entity (11) -- Amarr Event Frigate
+        - 1761 # Entity (11) -- Amarr Event Cruiser
+        - 1762 # Entity (11) -- Amarr Event Battlecruiser
+        - 1764 # Entity (11) -- ♦ Mining Frigate
+        - 1765 # Entity (11) -- ♦ Mining Barge
+        - 1766 # Entity (11) -- ♦ Mining Exhumer
+        - 1767 # Entity (11) -- ♦ Mining Hauler
+        - 1768 # Entity (11) -- Tutorial Seekers
+        - 1788 # Entity (11) -- Hidden Zenith Drifters
+        - 1789 # Entity (11) -- Hidden Zenith Amarr Battleship
+        - 1790 # Entity (11) -- Hidden Zenith Amarr Cruiser
+        - 1791 # Entity (11) -- Hidden Zenith Amarr Frigate
+        - 1792 # Entity (11) -- Hidden Zenith Caldari Battleship
+        - 1793 # Entity (11) -- Hidden Zenith Caldari Cruiser
+        - 1794 # Entity (11) -- Hidden Zenith Caldari Frigate
+        - 1795 # Entity (11) -- Hidden Zenith Gallente Battleship
+        - 1796 # Entity (11) -- Hidden Zenith Gallente Cruiser
+        - 1797 # Entity (11) -- Hidden Zenith Gallente Frigate
+        - 1798 # Entity (11) -- Hidden Zenith Minmatar Battleship
+        - 1799 # Entity (11) -- Hidden Zenith Minmatar Cruiser
+        - 1800 # Entity (11) -- Hidden Zenith Minmatar Frigate
+        - 1803 # Entity (11) -- ♦ Frigate
+        - 1804 # Entity (11) -- Hidden Zenith Amarr Capital
+        - 1805 # Entity (11) -- Hidden Zenith Caldari Capital
+        - 1806 # Entity (11) -- Hidden Zenith Gallente Capital
+        - 1807 # Entity (11) -- Hidden Zenith Minmatar Capital
+        - 1813 # Entity (11) -- ♦ Cruiser
+        - 1814 # Entity (11) -- ♦ Battleship
+        - 1872 # Entity (11) -- Structure Entities
+        - 1878 # Entity (11) -- ♦ Titan
+        - 1879 # Entity (11) -- ♦ Force Auxiliary
+        - 1880 # Entity (11) -- ♦ Dreadnought
+        - 1895 # Entity (11) -- Event Ships
+        - 1896 # Entity (11) -- ♦ Freighter
+        - 1904 # Entity (11) -- ♦ RW Pirate Frigate
+        - 1905 # Entity (11) -- ♦ RW Pirate Cruiser
+        - 1906 # Entity (11) -- ♦ RW Pirate Battleship
+        - 1907 # Entity (11) -- ♦ RW Empire Frigate
+        - 1908 # Entity (11) -- ♦ RW Empire Cruiser
+        - 1909 # Entity (11) -- ♦ RW Empire Battlecruiser
+        - 1910 # Entity (11) -- ♦ RW Empire Battleship
         - 1925 # Unknown InvGroup
         - 1926 # Unknown InvGroup
         - 1927 # Unknown InvGroup

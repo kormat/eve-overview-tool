@@ -1,26 +1,26 @@
-        - 311 # Reprocessing Array
-        - 363 # Ship Maintenance Array
-        - 365 # Control Tower
-        - 397 # Assembly Array
-        - 404 # Silo
-        - 413 # Laboratory
-        - 416 # Moon Mining
-        - 417 # Mobile Missile Sentry
-        - 426 # Mobile Projectile Sentry
-        - 430 # Mobile Laser Sentry
-        - 438 # Mobile Reactor
-        - 439 # Electronic Warfare Battery
-        - 440 # Sensor Dampening Battery
-        - 441 # Stasis Webification Battery
-        - 443 # Warp Scrambling Battery
-        - 444 # Shield Hardening Array
-        - 449 # Mobile Hybrid Sentry
-        - 471 # Corporate Hangar Array
-        - 473 # Tracking Array
-        - 707 # Jump Portal Array
-        - 709 # Scanner Array
-        - 837 # Energy Neutralizing Battery
-        - 838 # Cynosural Generator Array
-        - 839 # Cynosural System Jammer
-        - 1212 # Personal Hangar
-        - 1282 # Compression Array
+        - 311 # Starbase (23) -- Reprocessing Array
+        - 363 # Starbase (23) -- Ship Maintenance Array
+        - 365 # Starbase (23) -- Control Tower
+        - 397 # Starbase (23) -- Assembly Array
+        - 404 # Starbase (23) -- Silo
+        - 413 # Starbase (23) -- Laboratory
+        - 416 # Starbase (23) -- Moon Mining
+        - 417 # Starbase (23) -- Mobile Missile Sentry
+        - 426 # Starbase (23) -- Mobile Projectile Sentry
+        - 430 # Starbase (23) -- Mobile Laser Sentry
+        - 438 # Starbase (23) -- Mobile Reactor
+        - 439 # Starbase (23) -- Electronic Warfare Battery
+        - 440 # Starbase (23) -- Sensor Dampening Battery
+        - 441 # Starbase (23) -- Stasis Webification Battery
+        - 443 # Starbase (23) -- Warp Scrambling Battery
+        - 444 # Starbase (23) -- Shield Hardening Array
+        - 449 # Starbase (23) -- Mobile Hybrid Sentry
+        - 471 # Starbase (23) -- Corporate Hangar Array
+        - 473 # Starbase (23) -- Tracking Array
+        - 707 # Starbase (23) -- Jump Portal Array
+        - 709 # Starbase (23) -- Scanner Array
+        - 837 # Starbase (23) -- Energy Neutralizing Battery
+        - 838 # Starbase (23) -- Cynosural Generator Array
+        - 839 # Starbase (23) -- Cynosural System Jammer
+        - 1212 # Starbase (23) -- Personal Hangar
+        - 1282 # Starbase (23) -- Compression Array
