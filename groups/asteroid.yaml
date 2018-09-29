@@ -15,9 +15,9 @@
         - 467 # Asteroid (25) -- Gneiss
         - 468 # Asteroid (25) -- Mercoxit
         - 469 # Asteroid (25) -- Omber
-        - 1884 # Asteroid (25) -- Moon Asteroids
-        - 1911 # Asteroid (25) -- RW Asteroids
-        - 1920 # Unknown InvGroup
-        - 1921 # Unknown InvGroup
-        - 1922 # Unknown InvGroup
-        - 1923 # Unknown InvGroup
+        - 1884 # Asteroid (25) -- Ubiquitous Moon Asteroids
+        - 1911 # Asteroid (25) -- Empire Asteroids
+        - 1920 # Asteroid (25) -- Common Moon Asteroids
+        - 1921 # Asteroid (25) -- Uncommon Moon Asteroids
+        - 1922 # Asteroid (25) -- Rare Moon Asteroids
+        - 1923 # Asteroid (25) -- Exceptional Moon Asteroids

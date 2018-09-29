@@ -1,8 +1,0 @@
-- 1920 # Unknown InvGroup
-- 1921 # Unknown InvGroup
-- 1922 # Unknown InvGroup
-- 1923 # Unknown InvGroup
-Ubiquitous Moon Asteriods
-Common Moon Asteriods
-Exceptional Moon Asteroids
-Uncommon Moon Asteriods

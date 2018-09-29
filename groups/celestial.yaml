@@ -24,7 +24,10 @@
         - 897 # Celestial (2) -- Covert Beacon
         - 920 # Celestial (2) -- Effect Beacon
         - 988 # Celestial (2) -- Wormhole
+        - 1071 # Celestial (2) -- Flashpoint
+        - 1165 # Celestial (2) -- Satellite
         - 1316 # Celestial (2) -- Entosis Command Node
-        - 1704 # Celestial (2) -- Super Weapon Beacon
-        - 1882 # Celestial (2) -- MassiveEnvironments
-        - 1915 # Unknown InvGroup
+        - 1978 # Celestial (2) -- Industrial Support Facility
+        - 1981 # Celestial (2) -- Triglavian Support Pylons
+        - 1991 # Celestial (2) -- Abyssal Trace
+        - 1998 # Celestial (2) -- Station Conversion Monuments

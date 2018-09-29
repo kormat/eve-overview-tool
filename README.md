@@ -46,7 +46,7 @@ See a full example [here](https://gist.github.com/kormat/098d3890015f4a5a81d0cd3
 EOT can be installed via:
 `go get github.com/kormat/eve-overview-tool`
 
-EOT is developed using Go 1.6, so any later Go version should work fine.
+EOT is developed using Go 1.10, so any later Go version should work fine.
 
 ## Usage
 
@@ -73,3 +73,7 @@ To rebuild `bindata.go`:
    ```
    go-bindata data/
    ```
+
+To update `groups/`:
+1. Save the "All" overview default to a char's preset with the name "All", and export that.
+1. Run `eve-overview-tool -f exported.yaml -update-groups`

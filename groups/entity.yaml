@@ -1,19 +1,90 @@
         - 99 # Entity (11) -- Sentry Gun
         - 180 # Entity (11) -- Protective Sentry Gun
+        - 182 # Entity (11) -- Police Drone
         - 185 # Entity (11) -- Pirate Drone
         - 279 # Entity (11) -- LCO Drone
         - 286 # Entity (11) -- Minor Threat
         - 287 # Entity (11) -- Rogue Drone
+        - 288 # Entity (11) -- Faction Drone
         - 297 # Entity (11) -- Convoy
         - 298 # Entity (11) -- Convoy Drone
+        - 301 # Entity (11) -- Concord Drone
         - 306 # Entity (11) -- Spawn Container
         - 319 # Entity (11) -- Large Collidable Structure
         - 323 # Entity (11) -- Billboard
+        - 337 # Entity (11) -- Mission Drone
         - 383 # Entity (11) -- Destructible Sentry Gun
         - 435 # Entity (11) -- Deadspace Overseer
+        - 446 # Entity (11) -- Customs Official
         - 494 # Entity (11) -- Deadspace Overseer's Structure
         - 495 # Entity (11) -- Deadspace Overseer's Sentry
         - 496 # Entity (11) -- Deadspace Overseer's Belongings
+        - 520 # Entity (11) -- Storyline Frigate
+        - 522 # Entity (11) -- Storyline Cruiser
+        - 523 # Entity (11) -- Storyline Battleship
+        - 527 # Entity (11) -- Storyline Mission Frigate
+        - 533 # Entity (11) -- Storyline Mission Cruiser
+        - 534 # Entity (11) -- Storyline Mission Battleship
+        - 550 # Entity (11) -- Asteroid Angel Cartel Frigate
+        - 551 # Entity (11) -- Asteroid Angel Cartel Cruiser
+        - 552 # Entity (11) -- Asteroid Angel Cartel Battleship
+        - 553 # Entity (11) -- Asteroid Angel Cartel Officer
+        - 554 # Entity (11) -- Asteroid Angel Cartel Hauler
+        - 555 # Entity (11) -- Asteroid Blood Raiders Cruiser
+        - 556 # Entity (11) -- Asteroid Blood Raiders Battleship
+        - 557 # Entity (11) -- Asteroid Blood Raiders Frigate
+        - 558 # Entity (11) -- Asteroid Blood Raiders Hauler
+        - 559 # Entity (11) -- Asteroid Blood Raiders Officer
+        - 560 # Entity (11) -- Asteroid Guristas Battleship
+        - 561 # Entity (11) -- Asteroid Guristas Cruiser
+        - 562 # Entity (11) -- Asteroid Guristas Frigate
+        - 563 # Entity (11) -- Asteroid Guristas Hauler
+        - 564 # Entity (11) -- Asteroid Guristas Officer
+        - 565 # Entity (11) -- Asteroid Sansha's Nation Battleship
+        - 566 # Entity (11) -- Asteroid Sansha's Nation Cruiser
+        - 567 # Entity (11) -- Asteroid Sansha's Nation Frigate
+        - 568 # Entity (11) -- Asteroid Sansha's Nation Hauler
+        - 569 # Entity (11) -- Asteroid Sansha's Nation Officer
+        - 570 # Entity (11) -- Asteroid Serpentis Battleship
+        - 571 # Entity (11) -- Asteroid Serpentis Cruiser
+        - 572 # Entity (11) -- Asteroid Serpentis Frigate
+        - 573 # Entity (11) -- Asteroid Serpentis Hauler
+        - 574 # Entity (11) -- Asteroid Serpentis Officer
+        - 575 # Entity (11) -- Asteroid Angel Cartel Destroyer
+        - 576 # Entity (11) -- Asteroid Angel Cartel BattleCruiser
+        - 577 # Entity (11) -- Asteroid Blood Raiders Destroyer
+        - 578 # Entity (11) -- Asteroid Blood Raiders BattleCruiser
+        - 579 # Entity (11) -- Asteroid Guristas Destroyer
+        - 580 # Entity (11) -- Asteroid Guristas BattleCruiser
+        - 581 # Entity (11) -- Asteroid Sansha's Nation Destroyer
+        - 582 # Entity (11) -- Asteroid Sansha's Nation BattleCruiser
+        - 583 # Entity (11) -- Asteroid Serpentis Destroyer
+        - 584 # Entity (11) -- Asteroid Serpentis BattleCruiser
+        - 593 # Entity (11) -- Deadspace Angel Cartel BattleCruiser
+        - 594 # Entity (11) -- Deadspace Angel Cartel Battleship
+        - 595 # Entity (11) -- Deadspace Angel Cartel Cruiser
+        - 596 # Entity (11) -- Deadspace Angel Cartel Destroyer
+        - 597 # Entity (11) -- Deadspace Angel Cartel Frigate
+        - 602 # Entity (11) -- Deadspace Blood Raiders BattleCruiser
+        - 603 # Entity (11) -- Deadspace Blood Raiders Battleship
+        - 604 # Entity (11) -- Deadspace Blood Raiders Cruiser
+        - 605 # Entity (11) -- Deadspace Blood Raiders Destroyer
+        - 606 # Entity (11) -- Deadspace Blood Raiders Frigate
+        - 611 # Entity (11) -- Deadspace Guristas BattleCruiser
+        - 612 # Entity (11) -- Deadspace Guristas Battleship
+        - 613 # Entity (11) -- Deadspace Guristas Cruiser
+        - 614 # Entity (11) -- Deadspace Guristas Destroyer
+        - 615 # Entity (11) -- Deadspace Guristas Frigate
+        - 620 # Entity (11) -- Deadspace Sansha's Nation BattleCruiser
+        - 621 # Entity (11) -- Deadspace Sansha's Nation Battleship
+        - 622 # Entity (11) -- Deadspace Sansha's Nation Cruiser
+        - 623 # Entity (11) -- Deadspace Sansha's Nation Destroyer
+        - 624 # Entity (11) -- Deadspace Sansha's Nation Frigate
+        - 629 # Entity (11) -- Deadspace Serpentis BattleCruiser
+        - 630 # Entity (11) -- Deadspace Serpentis Battleship
+        - 631 # Entity (11) -- Deadspace Serpentis Cruiser
+        - 632 # Entity (11) -- Deadspace Serpentis Destroyer
+        - 633 # Entity (11) -- Deadspace Serpentis Frigate
         - 665 # Entity (11) -- Mission Amarr Empire Frigate
         - 666 # Entity (11) -- Mission Amarr Empire Battlecruiser
         - 667 # Entity (11) -- Mission Amarr Empire Battleship
@@ -57,18 +128,96 @@
         - 705 # Entity (11) -- Mission Minmatar Republic Cruiser
         - 706 # Entity (11) -- Mission Minmatar Republic Battleship
         - 715 # Entity (11) -- Destructible Agents In Space
+        - 755 # Entity (11) -- Asteroid Rogue Drone BattleCruiser
+        - 756 # Entity (11) -- Asteroid Rogue Drone Battleship
+        - 757 # Entity (11) -- Asteroid Rogue Drone Cruiser
+        - 758 # Entity (11) -- Asteroid Rogue Drone Destroyer
+        - 759 # Entity (11) -- Asteroid Rogue Drone Frigate
+        - 760 # Entity (11) -- Asteroid Rogue Drone Hauler
+        - 761 # Entity (11) -- Asteroid Rogue Drone Swarm
         - 784 # Entity (11) -- Large Collidable Ship
+        - 789 # Entity (11) -- Asteroid Angel Cartel Commander Frigate
+        - 790 # Entity (11) -- Asteroid Angel Cartel Commander Cruiser
+        - 791 # Entity (11) -- Asteroid Blood Raiders Commander Cruiser
+        - 792 # Entity (11) -- Asteroid Blood Raiders Commander Frigate
+        - 793 # Entity (11) -- Asteroid Angel Cartel Commander BattleCruiser
+        - 794 # Entity (11) -- Asteroid Angel Cartel Commander Destroyer
+        - 795 # Entity (11) -- Asteroid Blood Raiders Commander BattleCruiser
+        - 796 # Entity (11) -- Asteroid Blood Raiders Commander Destroyer
+        - 797 # Entity (11) -- Asteroid Guristas Commander BattleCruiser
+        - 798 # Entity (11) -- Asteroid Guristas Commander Cruiser
+        - 799 # Entity (11) -- Asteroid Guristas Commander Destroyer
+        - 800 # Entity (11) -- Asteroid Guristas Commander Frigate
+        - 801 # Entity (11) -- Deadspace Rogue Drone BattleCruiser
+        - 802 # Entity (11) -- Deadspace Rogue Drone Battleship
+        - 803 # Entity (11) -- Deadspace Rogue Drone Cruiser
+        - 804 # Entity (11) -- Deadspace Rogue Drone Destroyer
+        - 805 # Entity (11) -- Deadspace Rogue Drone Frigate
+        - 806 # Entity (11) -- Deadspace Rogue Drone Swarm
+        - 807 # Entity (11) -- Asteroid Sansha's Nation Commander BattleCruiser
+        - 808 # Entity (11) -- Asteroid Sansha's Nation Commander Cruiser
+        - 809 # Entity (11) -- Asteroid Sansha's Nation Commander Destroyer
+        - 810 # Entity (11) -- Asteroid Sansha's Nation Commander Frigate
+        - 811 # Entity (11) -- Asteroid Serpentis Commander BattleCruiser
+        - 812 # Entity (11) -- Asteroid Serpentis Commander Cruiser
+        - 813 # Entity (11) -- Asteroid Serpentis Commander Destroyer
+        - 814 # Entity (11) -- Asteroid Serpentis Commander Frigate
+        - 816 # Entity (11) -- Mission Generic Battleships
+        - 817 # Entity (11) -- Mission Generic Cruisers
+        - 818 # Entity (11) -- Mission Generic Frigates
+        - 819 # Entity (11) -- Deadspace Overseer Frigate
+        - 820 # Entity (11) -- Deadspace Overseer Cruiser
+        - 821 # Entity (11) -- Deadspace Overseer Battleship
+        - 822 # Entity (11) -- Mission Thukker Battlecruiser
+        - 823 # Entity (11) -- Mission Thukker Battleship
+        - 824 # Entity (11) -- Mission Thukker Cruiser
+        - 825 # Entity (11) -- Mission Thukker Destroyer
+        - 826 # Entity (11) -- Mission Thukker Frigate
+        - 827 # Entity (11) -- Mission Thukker Other
+        - 828 # Entity (11) -- Mission Generic Battle Cruisers
+        - 829 # Entity (11) -- Mission Generic Destroyers
+        - 843 # Entity (11) -- Asteroid Rogue Drone Commander BattleCruiser
+        - 844 # Entity (11) -- Asteroid Rogue Drone Commander Battleship
+        - 845 # Entity (11) -- Asteroid Rogue Drone Commander Cruiser
+        - 846 # Entity (11) -- Asteroid Rogue Drone Commander Destroyer
+        - 847 # Entity (11) -- Asteroid Rogue Drone Commander Frigate
+        - 848 # Entity (11) -- Asteroid Angel Cartel Commander Battleship
+        - 849 # Entity (11) -- Asteroid Blood Raiders Commander Battleship
+        - 850 # Entity (11) -- Asteroid Guristas Commander Battleship
+        - 851 # Entity (11) -- Asteroid Sansha's Nation Commander Battleship
+        - 852 # Entity (11) -- Asteroid Serpentis Commander Battleship
+        - 861 # Entity (11) -- Mission Fighter Drone
+        - 865 # Entity (11) -- Mission Amarr Empire Carrier
+        - 866 # Entity (11) -- Mission Caldari State Carrier
+        - 867 # Entity (11) -- Mission Gallente Federation Carrier
+        - 868 # Entity (11) -- Mission Minmatar Republic Carrier
+        - 875 # Entity (11) -- Mission Faction Transports
         - 922 # Entity (11) -- Capture Point
         - 924 # Entity (11) -- Mission Faction Battleship
         - 925 # Entity (11) -- FW Infrastructure Hub
         - 927 # Entity (11) -- Mission Faction Industrials
         - 952 # Entity (11) -- Mission Container
+        - 959 # Entity (11) -- Deadspace Sleeper Sleepless Sentinel
+        - 960 # Entity (11) -- Deadspace Sleeper Awakened Sentinel
+        - 961 # Entity (11) -- Deadspace Sleeper Emergent Sentinel
+        - 982 # Entity (11) -- Deadspace Sleeper Sleepless Defender
+        - 983 # Entity (11) -- Deadspace Sleeper Sleepless Patroller
+        - 984 # Entity (11) -- Deadspace Sleeper Awakened Defender
+        - 985 # Entity (11) -- Deadspace Sleeper Awakened Patroller
+        - 986 # Entity (11) -- Deadspace Sleeper Emergent Defender
+        - 987 # Entity (11) -- Deadspace Sleeper Emergent Patroller
         - 1006 # Entity (11) -- Mission Faction Cruiser
         - 1007 # Entity (11) -- Mission Faction Frigate
+        - 1051 # Entity (11) -- Incursion Sansha's Nation Industrial
+        - 1052 # Entity (11) -- Incursion Sansha's Nation Capital
+        - 1053 # Entity (11) -- Incursion Sansha's Nation Frigate
+        - 1054 # Entity (11) -- Incursion Sansha's Nation Cruiser
+        - 1056 # Entity (11) -- Incursion Sansha's Nation Battleship
         - 1166 # Entity (11) -- FW Minmatar Republic Frigate
         - 1167 # Entity (11) -- FW Caldari State Frigate
         - 1168 # Entity (11) -- FW Gallente Federation Frigate
         - 1169 # Entity (11) -- FW Amarr Empire Frigate
+        - 1174 # Entity (11) -- Asteroid Rogue Drone Officer
         - 1175 # Entity (11) -- FW Amarr Empire Destroyer
         - 1176 # Entity (11) -- FW Caldari State Destroyer
         - 1177 # Entity (11) -- FW Gallente Federation Destroyer
@@ -82,9 +231,15 @@
         - 1185 # Entity (11) -- FW Gallente Federation Battlecruiser
         - 1186 # Entity (11) -- FW Minmatar Republic Battlecruiser
         - 1207 # Entity (11) -- Scatter Container
+        - 1252 # Entity (11) -- Ghost Sites Angel Cartel Cruiser
+        - 1255 # Entity (11) -- Ghost Sites Blood Raiders Cruiser
+        - 1259 # Entity (11) -- Ghost Sites Guristas Cruiser
+        - 1262 # Entity (11) -- Ghost Sites Serpentis Cruiser
+        - 1265 # Entity (11) -- Ghost Sites Sanshas Cruiser
         - 1285 # Entity (11) -- Asteroid Mordus Legion Commander Frigate
         - 1286 # Entity (11) -- Asteroid Mordus Legion Commander Cruiser
         - 1287 # Entity (11) -- Asteroid Mordus Legion Commander Battleship
+        - 1288 # Entity (11) -- Ghost Sites Mordu's Legion
         - 1307 # Entity (11) -- Roaming Sleepers Cruiser
         - 1310 # Entity (11) -- Drifter Battleship
         - 1402 # Entity (11) -- Amarr Navy Roaming Battleship
@@ -92,20 +247,20 @@
         - 1412 # Entity (11) -- Amarr Navy Roaming Capital
         - 1413 # Entity (11) -- Amarr Navy Roaming Logistics
         - 1414 # Entity (11) -- Amarr Navy Roaming Frigate
-        - 1452 # Entity (11) -- Blood Raider Event Battleship
-        - 1453 # Entity (11) -- Blood Raider Event Frigate
-        - 1454 # Entity (11) -- Blood Raider Event Cruiser
-        - 1455 # Entity (11) -- Blood Raider Event Battlecruiser
+        - 1452 # Entity (11) -- Irregular Drone
+        - 1453 # Entity (11) -- Irregular EW Drone
+        - 1454 # Entity (11) -- Irregular Fighter
+        - 1455 # Entity (11) -- Irregular Fighter Squadron
         - 1465 # Entity (11) -- Mission Generic Supercarrier
         - 1529 # Entity (11) -- Deadspace Sleeper Upgraded Avenger
         - 1530 # Entity (11) -- Drifter Response Battleship
-        - 1566 # Entity (11) -- Serpentis Event Frigate
-        - 1567 # Entity (11) -- Serpentis Event Cruiser
-        - 1568 # Entity (11) -- Serpentis Event Battlecruiser
-        - 1664 # Entity (11) -- Guristas Event Frigate
-        - 1665 # Entity (11) -- Guristas Event Cruiser
-        - 1666 # Entity (11) -- Guristas Event Battlecruiser
-        - 1667 # Entity (11) -- Guristas Event Battleship
+        - 1566 # Entity (11) -- Irregular Shuttle
+        - 1567 # Entity (11) -- Irregular Corvette
+        - 1568 # Entity (11) -- Irregular Frigate
+        - 1664 # Entity (11) -- Irregular Destroyer
+        - 1665 # Entity (11) -- Irregular Cruiser
+        - 1666 # Entity (11) -- Irregular Battlecruiser
+        - 1667 # Entity (11) -- Irregular Battleship
         - 1681 # Entity (11) -- Asteroid Angel Cartel Dreadnought
         - 1682 # Entity (11) -- Asteroid Angel Cartel Titan
         - 1683 # Entity (11) -- Asteroid Blood Raider Dreadnought
@@ -121,38 +276,25 @@
         - 1720 # Entity (11) -- Roaming Serpentis Battleship
         - 1721 # Entity (11) -- Roaming Serpentis Cruiser
         - 1722 # Entity (11) -- Roaming Serpentis Frigate
-        - 1724 # Entity (11) -- Angel Cartel Event Frigate
-        - 1725 # Entity (11) -- Angel Cartel Event Cruiser
-        - 1726 # Entity (11) -- Angel Cartel Event Battlecruiser
+        - 1724 # Entity (11) -- Irregular Dreadnought
+        - 1725 # Entity (11) -- Irregular Force Auxiliary
+        - 1726 # Entity (11) -- Irregular Carrier
         - 1727 # Entity (11) -- Roaming Angel Cartel Battleship
         - 1728 # Entity (11) -- Roaming Angel Cartel Cruiser
         - 1729 # Entity (11) -- Roaming Angel Cartel Frigate
-        - 1731 # Entity (11) -- Event Container
+        - 1731 # Entity (11) -- Irregular Super Carrier
         - 1734 # Entity (11) -- Roaming Blood Raider Frigate
         - 1735 # Entity (11) -- Roaming Blood Raider Cruiser
         - 1736 # Entity (11) -- Roaming Blood Raider Battlecruiser
         - 1737 # Entity (11) -- Roaming Blood Raider Battleship
-        - 1759 # Entity (11) -- Amarr Event Frigate
-        - 1761 # Entity (11) -- Amarr Event Cruiser
-        - 1762 # Entity (11) -- Amarr Event Battlecruiser
+        - 1759 # Entity (11) -- Irregular Titan
+        - 1761 # Entity (11) -- Irregular Mining Frigate
+        - 1762 # Entity (11) -- Irregular Mining Barge
         - 1764 # Entity (11) -- ♦ Mining Frigate
         - 1765 # Entity (11) -- ♦ Mining Barge
         - 1766 # Entity (11) -- ♦ Mining Exhumer
         - 1767 # Entity (11) -- ♦ Mining Hauler
-        - 1768 # Entity (11) -- Tutorial Seekers
-        - 1788 # Entity (11) -- Hidden Zenith Drifters
-        - 1789 # Entity (11) -- Hidden Zenith Amarr Battleship
-        - 1790 # Entity (11) -- Hidden Zenith Amarr Cruiser
-        - 1791 # Entity (11) -- Hidden Zenith Amarr Frigate
-        - 1792 # Entity (11) -- Hidden Zenith Caldari Battleship
-        - 1793 # Entity (11) -- Hidden Zenith Caldari Cruiser
-        - 1794 # Entity (11) -- Hidden Zenith Caldari Frigate
-        - 1795 # Entity (11) -- Hidden Zenith Gallente Battleship
-        - 1796 # Entity (11) -- Hidden Zenith Gallente Cruiser
-        - 1797 # Entity (11) -- Hidden Zenith Gallente Frigate
-        - 1798 # Entity (11) -- Hidden Zenith Minmatar Battleship
-        - 1799 # Entity (11) -- Hidden Zenith Minmatar Cruiser
-        - 1800 # Entity (11) -- Hidden Zenith Minmatar Frigate
+        - 1768 # Entity (11) -- Seeker Scouts
         - 1803 # Entity (11) -- ♦ Frigate
         - 1804 # Entity (11) -- Hidden Zenith Amarr Capital
         - 1805 # Entity (11) -- Hidden Zenith Caldari Capital
@@ -160,21 +302,16 @@
         - 1807 # Entity (11) -- Hidden Zenith Minmatar Capital
         - 1813 # Entity (11) -- ♦ Cruiser
         - 1814 # Entity (11) -- ♦ Battleship
-        - 1872 # Entity (11) -- Structure Entities
         - 1878 # Entity (11) -- ♦ Titan
         - 1879 # Entity (11) -- ♦ Force Auxiliary
         - 1880 # Entity (11) -- ♦ Dreadnought
-        - 1895 # Entity (11) -- Event Ships
-        - 1896 # Entity (11) -- ♦ Freighter
-        - 1904 # Entity (11) -- ♦ RW Pirate Frigate
-        - 1905 # Entity (11) -- ♦ RW Pirate Cruiser
-        - 1906 # Entity (11) -- ♦ RW Pirate Battleship
-        - 1907 # Entity (11) -- ♦ RW Empire Frigate
-        - 1908 # Entity (11) -- ♦ RW Empire Cruiser
-        - 1909 # Entity (11) -- ♦ RW Empire Battlecruiser
-        - 1910 # Entity (11) -- ♦ RW Empire Battleship
-        - 1925 # Unknown InvGroup
-        - 1926 # Unknown InvGroup
-        - 1927 # Unknown InvGroup
-        - 1928 # Unknown InvGroup
-        - 1929 # Unknown InvGroup
+        - 1895 # Entity (11) -- Irregular Industrial
+        - 1896 # Entity (11) -- ♦ Industrial Command 
+        - 1909 # Entity (11) -- ♦ Battlecruiser
+        - 1925 # Entity (11) -- Irregular Industrial Command Ship
+        - 1926 # Entity (11) -- Irregular Freighter
+        - 1927 # Entity (11) -- Irregular Structure
+        - 1928 # Entity (11) -- Irregular Container
+        - 1929 # Entity (11) -- Irregular - Unidentified
+        - 1982 # Entity (11) -- Abyssal Spaceship Entities
+        - 1997 # Entity (11) -- Abyssal Drone Entities

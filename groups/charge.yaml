@@ -1,5 +1,6 @@
         - 90 # Charge (8) -- Bomb
         - 479 # Charge (8) -- Scanner Probe
+        - 492 # Charge (8) -- Survey Probe
         - 548 # Charge (8) -- Interdiction Probe
         - 863 # Charge (8) -- Bomb ECM
         - 864 # Charge (8) -- Bomb Energy

@@ -1,7 +1,9 @@
         - 100 # Drone (18) -- Combat Drone
         - 101 # Drone (18) -- Mining Drone
         - 544 # Drone (18) -- Energy Neutralizer Drone
+        - 549 # Drone (18) -- Fighter Drone
         - 639 # Drone (18) -- Electronic Warfare Drone
         - 640 # Drone (18) -- Logistic Drone
         - 641 # Drone (18) -- Stasis Webifying Drone
+        - 1023 # Drone (18) -- Fighter Bomber
         - 1159 # Drone (18) -- Salvage Drone

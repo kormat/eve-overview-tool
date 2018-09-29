@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path"
 	"regexp"
 	"strings"
 
@@ -28,8 +29,10 @@ import (
 )
 
 const commentMarker = "EOTCOMMENT"
+const allGroupPreset = "all"
 
 var cfgFile = flag.String("f", "", "Overview file to operate on")
+var updGroups = flag.Bool("update-groups", false, "Update groups/ using an 'All' preset.")
 
 var invGroups map[InvGroupId]*InvGroup
 var invCategories map[InvCategoryId]string
@@ -59,6 +62,13 @@ func main() {
 		log.Printf("ERROR: unable to load overview file: %s", err)
 		os.Exit(1)
 	}
+	if *updGroups {
+		if err = updateGroups(o); err != nil {
+			log.Printf("ERROR: unable to update groups/: %s", err)
+			os.Exit(1)
+		}
+		return
+	}
 	b, err := yaml.Marshal(o)
 	if err != nil {
 		log.Printf("ERROR: unable to marshal back to yaml: %s", err)
@@ -84,4 +94,54 @@ func unescapeComments(b []byte) []byte {
 		out.WriteString("\r\n")
 	}
 	return out.Bytes()
+}
+
+func updateGroups(o *Overview) error {
+	var p *Preset
+	for i := range o.Presets {
+		if strings.ToLower(o.Presets[i].Name) == allGroupPreset {
+			p = o.Presets[i]
+			break
+		}
+	}
+	if p == nil {
+		return fmt.Errorf("No 'All' preset found")
+	}
+	// Make a list of inventory group IDs per category.
+	cats := make(map[InvCategoryId][]InvGroupId)
+	for _, invG := range p.Groups.Groups {
+		cat := invGroups[invG].Cat
+		cats[cat] = append(cats[cat], invG)
+	}
+	for cat, invgs := range cats {
+		if err := updateGroup(catToFilename(cat), invgs); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func updateGroup(catFile string, invgids []InvGroupId) error {
+	f, err := os.OpenFile(path.Join("groups", catFile), os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
+	if err != nil {
+		return err
+	}
+	for _, invgid := range invgids {
+		invg := invGroups[invgid]
+		// Do manual marshalling here, as it's just easier. Indent by 8 spaces
+		// to allow easy use in creating an overview.
+		l := fmt.Sprintf("        - %d # %s -- %s\n", invg.Id, invg.Cat, invg.Name)
+		if _, err = f.WriteString(l); err != nil {
+			return err
+		}
+	}
+	if err := f.Close(); err != nil {
+		return err
+	}
+	return nil
+}
+
+func catToFilename(cat InvCategoryId) string {
+	n := strings.ToLower(invCategories[cat])
+	return strings.Replace(n, " ", "_", -1) + ".yaml"
 }
