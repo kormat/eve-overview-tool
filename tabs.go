@@ -19,10 +19,13 @@ import (
 )
 
 type TabSetup struct {
-	Id       int
-	Bracket  NullableString
-	Name     string
-	Overview string
+	Id           int
+	Bracket      NullableString
+	Name         string
+	Overview     string
+	ShowAll      *bool
+	ShowNone     *bool
+	ShowSpecials *bool
 }
 
 func (ts *TabSetup) MarshalYAML() (interface{}, error) {
@@ -30,6 +33,15 @@ func (ts *TabSetup) MarshalYAML() (interface{}, error) {
 		{"bracket", ts.Bracket},
 		{"name", ts.Name},
 		{"overview", ts.Overview},
+	}
+	if ts.ShowAll != nil {
+		attrs = append(attrs, []interface{}{"showAll", ts.ShowAll})
+	}
+	if ts.ShowNone != nil {
+		attrs = append(attrs, []interface{}{"showNone", ts.ShowNone})
+	}
+	if ts.ShowSpecials != nil {
+		attrs = append(attrs, []interface{}{"showSpecials", ts.ShowSpecials})
 	}
 	return []interface{}{ts.Id, attrs}, nil
 }
@@ -57,19 +69,39 @@ func (ts *TabSetup) UnmarshalYAML(f func(interface{}) error) error {
 		if err != nil {
 			return fmt.Errorf("TabSetup (%d) has bad attribute: %s", ts.Id, err)
 		}
-		s, err := intfToString(attrVal)
-		if err != nil {
-			return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
-		}
+		var b bool
 		switch name {
 		case "bracket":
+			s, err := intfToString(attrVal)
+			if err != nil {
+				return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
+			}
 			ts.Bracket = NullableString(s)
 		case "name":
-			ts.Name = s
+			if ts.Name, err = intfToString(attrVal); err != nil {
+				return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
+			}
 		case "overview":
-			ts.Overview = s
+			if ts.Overview, err = intfToString(attrVal); err != nil {
+				return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
+			}
+		case "showAll":
+			if b, err = intfToBool(attrVal); err != nil {
+				return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
+			}
+			ts.ShowAll = &b
+		case "showNone":
+			if b, err = intfToBool(attrVal); err != nil {
+				return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
+			}
+			ts.ShowNone = &b
+		case "showSpecials":
+			if b, err = intfToBool(attrVal); err != nil {
+				return fmt.Errorf("TabSetup (%d) attribute %+q: %s", ts.Id, name, err)
+			}
+			ts.ShowSpecials = &b
 		default:
-			return fmt.Errorf("TabSetup (%+d) has unknown attribute: %+q", ts.Id, name)
+			return fmt.Errorf("TabSetup (%d) has unknown attribute: %+q", ts.Id, name)
 		}
 	}
 	return nil

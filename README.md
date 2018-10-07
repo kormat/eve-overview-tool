@@ -13,14 +13,15 @@ presets:
       - []
     - - filteredStates
       - - 11
-        - 12
-        - 14
         - 15
+        - 16
     - - groups
-      - - 10
+      - - 6
+        - 10
         - 15
         - 25
         - 26
+        - 27
 ```
 becomes:
 ```
@@ -30,14 +31,15 @@ presets:
       - []
     - - filteredStates
       - - 11 # Pilot is in your fleet
-        - 12 # Pilot is in your corporation
-        - 14 # Pilot is in your alliance
         - 15 # Pilot has Excellent Standing.
+        - 16 # Pilot has Good Standing.
     - - groups
-      - - 10 # Stargate
-        - 15 # Station
-        - 25 # Frigate
-        - 26 # Cruiser
+      - - 6 # Celestial (2) -- Sun
+        - 10 # Celestial (2) -- Stargate
+        - 15 # Station (3) -- Station
+        - 25 # Ship (6) -- Frigate
+        - 26 # Ship (6) -- Cruiser
+        - 27 # Ship (6) -- Battleship
 ```
 See a full example [here](https://gist.github.com/kormat/098d3890015f4a5a81d0cd39ea5270d7)
 
